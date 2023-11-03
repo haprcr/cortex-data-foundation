@@ -44,7 +44,7 @@ gcloud builds submit --config=cloudbuild.yaml --suppress-logs \
     --substitutions=_GCS_BUCKET="${_GCS_BUCKET}" . \
     && _SUCCESS="true"
 if [[ "${_SUCCESS}" != "true" ]]; then
-    echo -e "\n🛑 Data Foundation deployment has failed......... 🛑"
+    echo -e "\n🛑 Data Foundation deployment has failed...................🛑"
     exit 1
 else
     echo -e "\n✅ Data Foundation has been successfully deployed. 🦄"
