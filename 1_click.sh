@@ -24,3 +24,6 @@ git submodule update --init --recursive &> /dev/null || true
 echo -e -n "\r                \r"
 src/utils/interactive/interactive.sh "${1}" "${2}"
 popd 1> /dev/null
+
+# 1-Click Deployment Launcher
+
