@@ -7,3 +7,5 @@ pytest==6.2.*
 pytest-cov==3.0.*
 pytest-env==0.6.*
 pylint==2.12.*
+pylint==2.12.*
+pylint==2.12.*
