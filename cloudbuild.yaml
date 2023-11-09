@@ -38,18 +38,18 @@ steps:
         cat ${_CONFIG_FILE}
         echo -e "\n--------------------------------"
 
-  - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
-    id: 'k9-pre'
-    waitFor: ['init_deploy_config']
-    entrypoint: "bash"
-    args:
-      - "-c"
-      - |-
-        export PYTHONPATH=$$PYTHONPATH:src/:.
-        python3 src/k9/src/deploy_k9.py \
-                --config-file "${_CONFIG_FILE}" \
-                --stage pre \
-                --logs-bucket "${_GCS_BUCKET}"
+  # - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
+  #   id: 'k9-pre'
+  #   waitFor: ['init_deploy_config']
+  #   entrypoint: "bash"
+  #   args:
+  #     - "-c"
+  #     - |-
+  #       export PYTHONPATH=$$PYTHONPATH:src/:.
+  #       python3 src/k9/src/deploy_k9.py \
+  #               --config-file "${_CONFIG_FILE}" \
+  #               --stage pre \
+  #               --logs-bucket "${_GCS_BUCKET}"
 
   - name: gcr.io/kittycorn-public/deploy-kittycorn:v2.0
     entrypoint: "bash"
